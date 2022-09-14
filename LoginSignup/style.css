@@ -1,0 +1,368 @@
+*{
+  font-family: 'Red Hat Mono', monospace;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(https://wallpapercave.com/wp/wp2757874.gif);
+  background-size:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 46rem;
+}
+.point{
+  cursor: pointer;
+}
+.main
+{
+  position: relative;
+  width: 20rem;
+  background-color: #161624aa;
+  height: 29rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#chk{
+  display: none;
+  cursor: pointer;
+  
+}
+.signlabel{
+  transition: 0.7s;
+  font-size: 2rem;
+  color: aliceblue;
+  margin-bottom: 2.5rem;
+  width: 40%;
+  text-align: center;
+  
+}
+
+.signform{
+  font-size: 0.9rem;
+  color: aliceblue;
+  display: flex;
+  height: 15rem;
+  width: 10rem;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.loginform{
+  position: relative;
+  font-size: 0.9rem;
+  color: #573b8a;
+  display: flex;
+  height: 15rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.sign{
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:  flex-start ;
+  align-items: center;
+}
+
+.signusername{
+  position: relative;
+  top: 2.2rem;
+  outline: none;
+	border: none;
+  color: aliceblue;
+  background-color: transparent;
+  padding-bottom: 0.2rem;
+  border-bottom: white 1px solid;
+  text-align: start;
+}
+.signbutton{
+  width: 100%;
+	height: 2rem;
+	margin: 2rem auto 0rem auto;
+  display: flex;
+	justify-content: center;
+  align-items: center;
+	display: block;
+	color: #fff;
+	background-color: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+.loginbutton{
+  width: 100%;
+	height: 2rem;
+	margin: 2rem  0 0rem 0;
+  padding: 0 3.7rem ;
+  display: flex;
+	justify-content: center;
+  align-items: center;
+	display: block;
+	color: #fff;
+	background-color: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+.inputGroup{
+  position: relative;
+  height: 5rem;
+}
+.lable{
+  position: absolute;
+  margin: 1.2rem 0rem 0rem 0rem;
+}
+.logusername{
+  position: relative;
+  top: 2.2rem;
+  outline: none;
+	border: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  padding-bottom: 0.2rem;
+  border-bottom:  #573b8a 1px solid;
+  text-align: start;
+}
+.inputGroup:focus-within .lable{
+  transform: translate(-4px,-9px) scale(0.9);
+  transition: 0.5s;
+  color: #e91f1f;
+}
+
+.login{
+  transition: 0.65s ease-in;
+  padding-bottom: 1rem;
+  background-color:white;
+  width: 100%;
+  height: 30rem;
+  bottom: -27.5rem;
+  border-radius:  50% / 10%;
+  position: absolute;
+  color: #573b8a;
+}
+.loginlabel{
+  cursor: pointer;
+  font-weight: 100;
+  color: #573b8a;
+  width: 100%;
+  text-align: center;
+}
+#chk:checked ~ .login {
+  transform: translateY(-21rem);
+  transition: 1s ease-in-out;
+}
+#chk:checked ~ .sign .signlabel{
+  transition: 1s ;
+  transform: translate(0,-1.5rem) scale(.7);
+
+}
+#chk:checked ~ .sign .inputGroup{
+  transition: 0.6s ;
+  transform: translate(0,-1.5rem) ;
+}
+
+
+
+/*
+
+				
+	<div class="main">
+		<input type="checkbox" id="chk">
+
+			<div class="signup">
+				<form>
+					<label for="chk" class="sig">Sign up</label>
+				
+    <div class="user-box">
+      <input type="text" title="Enter Username" required>
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="text" title="Enter email" required>
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="password" title="Enter password" required>
+      <label>Password</label>
+    </div>
+          
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" class="log" >Login</label>
+	
+          				
+
+    <div class="user-box">
+
+      <input type="text" title="Enter Username" required>
+
+      <label>Username</label>
+
+    </div>				
+
+    <div class="user-box">
+
+      <input type="password" title="Enter password" required>
+
+      <label>Password</label>
+
+    </div>
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;378&family=Source+Sans+Pro:ital@1&family=Zen+Antique&display=swap');
+*{
+  font-family: 'Red Hat Mono', monospace;
+}
+:root{
+  --First-color:#161624;
+  --Second-color:#f2363c;
+  --third-color:#573b8a;
+} 
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://wallpapercave.com/wp/wp2757874.gif);
+  background-size:cover ;
+  background-position:right;
+}
+.main{
+  width: 350px;
+  background-color: #161624aa;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+#chk{
+  display: none;
+}
+.signup{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.user-box {
+  position: relative;
+  width :60%;
+  margin:0px auto;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 10px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+  background: #6d44b8;
+}
+.login{
+  height: 470px;
+  background: #eee;
+  border-radius: 60% / 10%;
+  transform: translateY(-200px);
+  transition: .8s ease-in-out;
+}
+
+#chk:checked ~ .login{
+  transform: translateY(-530px);
+}
+#chk:checked ~ .login label{
+  transform: scale(1);
+}
+#chk:checked ~ .signup .sig{
+  transform: scale(.6);
+  margin-top:10px;
+}
+.user-box label {
+  position: absolute;
+  top:0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.user-box input {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #f2363c;
+  font-size: 12px;
+  font-weight:bold;
+}
+label[for="chk"] {
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+} 
+.sig{
+  color:#fff;
+	margin: 40px;
+}
+.log{
+	margin: 80px;
+}
+.login label , .login input{
+  color:#573b8a;
+}
+.login input{
+  border-color:#573b8a;
+}
